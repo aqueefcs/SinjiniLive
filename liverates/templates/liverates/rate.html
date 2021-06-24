@@ -1,0 +1,702 @@
+{% extends 'liverates/main.html' %}
+{% load static %}
+{% block content %}
+
+
+    <div class="container-fluid">
+		<div class="row">
+        	<div class="col-sm-5 left-wrapper">
+            	<div class="event-banner-wrapper">
+                	<div class="logo">
+                        <!--h1>Stage</h1-->
+                        <img src="{% static 'images/logo.png' %}" class="img-fluid">
+                    </div>
+                	<div class="mask rgba-pink-strong rounded">
+	                	<h2 class="h2-responsive">
+	                    GOLD<br>Live Rates, KOLKATA
+	                    </h2>
+
+                	</div>
+                  <div class="text-left">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fullHeightModalRight">Know More</button>
+
+                  </div>
+                    <p>© 2021 Copyright: Sinjini gems and Jewellers</p>
+                </div>
+            </div>
+            <div class="col-sm-7 right-wrapper">
+            	<div class="event-ticket-wrapper">
+
+                    <div class="event-tab">
+
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#buyTicket" aria-controls="buyTicket" role="tab" data-toggle="tab" class="text-dark font-weight-bold">Live Rates</a></li>
+                        <li role="presentation"><a href="#venue" aria-controls="venue" role="tab" data-toggle="tab" class="text-dark font-weight-bold">About Us</a></li>
+
+
+                        <li role="presentation"><a href="#termCondition" aria-controls="termCondition" role="tab" data-toggle="tab" class="text-dark font-weight-bold">Contact</a></li>
+                      </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="buyTicket">
+                    		<section class="container">
+                    				<!-- TradingView Widget BEGIN -->
+								    <div class="tradingview-widget-container>
+								      <div class="tradingview-widget-container__widget"></div>
+								      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>
+								      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+								      {
+								      "symbols": [
+								        {
+								          "description": "AU/USD",
+								          "proName": "TVC:GOLD"
+								        },
+								        {
+								          "description": "AU",
+								          "proName": "CURRENCYCOM:GOLD"
+								        },
+								        {
+								          "description": "AU/INR",
+								          "proName": "FX_IDC:XAUINRG"
+								        },
+								        {
+								          "description": "AG/USD",
+								          "proName": "TVC:SILVER"
+								        },
+								        {
+								          "description": "XAG/INR",
+								          "proName": "FX_IDC:XAGINRG"
+								        }
+								      ],
+								      "showSymbolLogo": true,
+								      "colorTheme": "light",
+								      "isTransparent": false,
+								      "displayMode": "adaptive",
+								      "locale": "en"
+								    }
+								      </script>
+
+
+								    <!-- TradingView Widget END -->
+                    		</section>
+                    	    <!--Section: Block Content-->
+						    <section class="mt-3 container">
+
+						      <!--Grid row-->
+						      <div class="row">
+
+						        <!--Grid column-->
+						        <div class="col-lg-4 col-md-12 mb-4">
+
+						          <div class="rate-card media blue lighten-2 text-white z-depth-1 rounded">
+						            <!--i class="far fa-money-bill-alt fa-3x blue z-depth-1 p-4 rounded-left text-white"></i-->
+						            <img class="img-fluid  blue z-depth-1 p-4 rounded-left" src="{% static 'images/gold-ingot.png' %}">
+						            <div class="media-body">
+						              <h4 class="text-uppercase font-weight-bolder mt-2 mb-1 ml-3">GOld 24 Carat</h4>
+                          <hr class="my-10">
+						              <h2 class="font-weight-bold ml-3">₹ {{goldcard24}}
+						                {% if plus %}
+						                  <span class="text-success">
+						                    {{gold24.1.2}}
+						                  </span>
+						                {% endif %}
+						                {% if minus %}
+						                  <span class="text-danger">
+						                    {{gold24.1.2}}
+						                  </span>
+						                {% endif %}
+						              </h2>
+						            </div>
+						          </div>
+						        </div>
+						        <!--Grid column-->
+
+						        <!--Grid column-->
+						        <div class="col-lg-4 col-md-12 mb-4">
+
+						          <div class="rate-card media blue lighten-2 text-white z-depth-1 rounded">
+						            <!--i class="far fa-money-bill-alt fa-3x blue z-depth-1 p-4 rounded-left text-white"></i-->
+						            <img class="img-fluid  blue z-depth-1 p-4 rounded-left" src="{% static 'images/gold-ingot.png' %}">
+						            <div class="media-body">
+						              <h4 class="text-uppercase font-weight-bolder mt-2 mb-1 ml-3">GOld 22 Carat</h4>
+                          <hr class="my-10">
+						              <h2 class="font-weight-bold ml-3">₹ {{goldcard22}}
+						                {% if plus %}
+						                  <span class="text-success">
+						                    {{gold22.1.2}}
+						                  </span>
+						                {% endif %}
+						                {% if minus %}
+						                  <span class="text-danger">
+						                    {{gold22.1.2}}
+						                  </span>
+						                {% endif %}
+						              </h2>
+						            </div>
+						          </div>
+						        </div>
+						        <!--Grid column-->
+
+						        <!--Grid column-->
+						        <div class="col-lg-4 col-md-12 mb-4">
+
+						          <div class="rate-card media blue lighten-2 text-white z-depth-1 rounded">
+						            <!--i class="far fa-money-bill-alt fa-3x blue z-depth-1 p-4 rounded-left text-white"></i-->
+						            <img class="img-fluid  blue z-depth-1 p-4 rounded-left" src="{% static 'images/silver.png' %}">
+						            <div class="media-body">
+						              <h4 class="text-uppercase font-weight-bolder mt-2 mb-1 ml-3">Silver</h4>
+                          <hr class="my-10">
+						              <h2 class="font-weight-bold ml-3">₹ {{silverrate}}
+						                {% if plus %}
+						                  <span class="text-success">
+						                    {{gold24.1.2}}
+						                  </span>
+						                {% endif %}
+						                {% if minus %}
+						                  <span class="text-danger">
+						                    {{gold24.1.2}}
+						                  </span>
+						                {% endif %}
+						              </h2>
+						            </div>
+						          </div>
+						        </div>
+						        <!--Grid column-->
+
+						      </div>
+						      <!--Grid row-->
+
+						    </section>
+						    <!--Section: Blocks Content-->
+						    <hr class="my-5">
+						    <!-- Section: Block Content -->
+							  <section class="container">
+
+							    <div class="view view-cascade card card-list">
+							      <div class="card-header white d-flex justify-content-between align-items-center py-3">
+							        <p class="h5-responsive font-weight-bold mb-0"><i class="fas fa-chart-line pr-2"></i> Gold Chart</p>
+							        <p class="h5-responsive font-weight-bold mb-0"><a><i class="fas fa-times"></i></a></p>
+							      </div>
+							      <div class="card-body">
+							        	<!-- TradingView Widget BEGIN -->
+					                    <div class="tradingview-widget-container">
+					                      <div id="tradingview_0edf3"></div>
+					                      <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/FX_IDC-XAUINR/" rel="noopener" target="_blank"><span class="blue-text">XAUINR Chart</span></a> by TradingView</div>
+					                      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+					                      <script type="text/javascript">
+					                      new TradingView.widget(
+					                      {
+					                      "width": 650,
+					                      "height": 610,
+					                      "symbol": "FX_IDC:XAUINR",
+					                      "interval": "D",
+					                      "timezone": "Etc/UTC",
+					                      "theme": "light",
+					                      "style": "3",
+					                      "locale": "in",
+					                      "toolbar_bg": "#f1f3f6",
+					                      "enable_publishing": false,
+					                      "allow_symbol_change": true,
+					                      "container_id": "tradingview_0edf3"
+					                    }
+					                      );
+					                      </script>
+					                    </div>
+					                    <!-- TradingView Widget END -->
+							      </div>
+							    </div>
+
+							  </section>
+							  <!-- Section: Block Content -->
+							  <hr class="my-5">
+							  <section class="container">
+                  <h3 class="text-dark font-weight-bold">Last 7 days 24 carat Gold Price Per Gram in Kolkata (INR)</h3>
+                      <table class="table">
+                        <thead class="bg-warning text-dark font-weight-bold">
+                          <tr>
+                            {% for i in gold24.0 %}
+                              <th scope="col" style="font-size: 1.5rem;">{{i}}</th>
+                            {% endfor %}
+                          </tr>
+                        </thead>
+                        <tbody class="font-weight-bold">
+                          <tr>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.1.0}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.1.1}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">
+                              {% if plus %}
+                                <span class="text-success">
+                                  {{gold24.1.2}}
+                                </span>
+                              {% endif %}
+                              {% if minus %}
+                                <span class="text-danger">
+                                  {{gold24.1.2}}
+                                </span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.2.0}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.2.1}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">
+                              {% if plus %}
+                                <span class="text-success">
+                                  {{gold24.2.2}}
+                                </span>
+                              {% endif %}
+                              {% if minus %}
+                                <span class="text-danger">
+                                  {{gold24.2.2}}
+                                </span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.3.0}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.3.1}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">
+                              {% if plus %}
+                                <span class="text-success">
+                                  {{gold24.3.2}}
+                                </span>
+                              {% endif %}
+                              {% if minus %}
+                                <span class="text-danger">
+                                  {{gold24.3.2}}
+                                </span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.4.0}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.4.1}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">
+                              {% if plus %}
+                                <span class="text-success">
+                                  {{gold24.4.2}}
+                                </span>
+                              {% endif %}
+                              {% if minus %}
+                                <span class="text-danger">
+                                  {{gold24.4.2}}
+                                </span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.5.0}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.5.1}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">
+                              {% if plus %}
+                                <span class="text-success">
+                                  {{gold24.5.2}}
+                                </span>
+                              {% endif %}
+                              {% if minus %}
+                                <span class="text-danger">
+                                  {{gold24.5.2}}
+                                </span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.6.0}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.6.1}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">
+                              {% if plus %}
+                                <span class="text-success">
+                                  {{gold24.6.2}}
+                                </span>
+                              {% endif %}
+                              {% if minus %}
+                                <span class="text-danger">
+                                  {{gold24.6.2}}
+                                </span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.7.0}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold24.7.1}}</td>
+                            <td class="font-weight-bold" style="font-size: 1.5rem;">
+                              {% if plus %}
+                                <span class="text-success">
+                                  {{gold24.7.2}}
+                                </span>
+                              {% endif %}
+                              {% if minus %}
+                                <span class="text-danger">
+                                  {{gold24.7.2}}
+                                </span>
+                              {% endif %}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+							  			<hr class="my-10">
+                      <h3 class="text-dark font-weight-bold">Last 7 days 22 carat Gold Price Per Gram in Kolkata (INR)</h3>
+                          <table class="table">
+                            <thead class="bg-warning text-dark font-weight-bold">
+                              <tr>
+                                {% for i in gold22.0 %}
+                                  <th scope="col" style="font-size: 1.5rem;">{{i}}</th>
+                                {% endfor %}
+                              </tr>
+                            </thead>
+                            <tbody class="font-weight-bold">
+                              <tr>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.1.0}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.1.1}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.1.2}}</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.2.0}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.2.1}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.2.2}}</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.3.0}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.3.1}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.3.2}}</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.4.0}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.4.1}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.4.2}}</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.5.0}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.5.1}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.5.2}}</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.6.0}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.6.1}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.6.2}}</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.7.0}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.7.1}}</td>
+                                <td class="font-weight-bold" style="font-size: 1.5rem;">{{gold22.7.2}}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+							      </section>
+                    <!-- Footer -->
+                        <footer class="page-footer special-color-dark pt-4">
+
+                          <!-- Footer Links -->
+                          <div class="container-fluid text-center text-md-left">
+
+                            <!-- Grid row -->
+                            <div class="row">
+
+                              <!-- Grid column -->
+                              <div class="col-md-6 mt-md-0 mt-3">
+
+                                <!-- Content -->
+                                <h5 class="text-uppercase">Sinjini Gems and Jewellers</h5>
+                                <p>The Best in Light Wieght and Budget Jewellery</p>
+
+                              </div>
+                              <!-- Grid column -->
+
+                              <hr class="clearfix w-100 d-md-none pb-3">
+
+                              <!-- Grid column -->
+                              <div class="col-md-3 mb-md-0 mb-3">
+
+                                <!-- Links -->
+
+
+                                <ul class="list-unstyled">
+                                  <li>
+                                    <a href="#!">Home</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!">About</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!">Contact</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!">Privacy Policy</a>
+                                  </li>
+                                </ul>
+
+                              </div>
+                              <!-- Grid column -->
+
+                              <!-- Grid column -->
+                              <div class="col-md-3 mb-md-0 mb-3">
+
+
+
+                                <ul class="list-unstyled">
+                                  <li>
+                                    <a href="#!"><i class="fab fa-facebook fa-2x blue-text"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#!"><i class="fas fa-envelope fa-2x orange-text"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#!"><i class="fab fa-instagram fa-2x red-text"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#!"><i class="fab fa-twitter fa-2x blue-text"></i></a>
+                                  </li>
+                                </ul>
+
+                              </div>
+                              <!-- Grid column -->
+
+                            </div>
+                            <!-- Grid row -->
+
+                          </div>
+                          <!-- Footer Links -->
+
+                          <!-- Copyright -->
+                          <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                            <a href="">Sinjini Gems and Jewellers</a>
+                          </div>
+                          <!-- Copyright -->
+
+                        </footer>
+                        <!-- Footer -->
+
+                    </div>
+                    <div role="tabpanel" class="container tab-pane fade" id="venue">
+                        <hr class="my-10">
+                    	  <h1 class="text-center text-dark font-weight-bold">About Us<h1>
+                        <hr class="my-10">
+                        <div class="row">
+                              <div class="col-md-4 text-center">
+                                  <h3 class="font-weight-bold">Contact</h3>
+                                  <p style="font-size:20px;">062900 48766</p>
+                                  <p style="font-size:20px;">070038 92827</p>
+                              </div>
+                              <div class="col-md-4 text-center">
+                                    <h3 class="font-weight-bold">Address</h3>
+                                    <p style="font-size:20px;" class="justify-content-center">G.T Road
+                                      Gohat, Melatala
+                                      Near Pandua Hospital
+                                      Pandua, West Bengal 712149
+                                      India</p>
+                                    <a href="https://www.google.com/maps/place/Sinjini+Gems+%26+Jewellers/@23.0735051,88.2806654,17z/data=!3m1!4b1!4m5!3m4!1s0x39f8f3cd0bf2b349:0x7928cc3f8f91fd17!8m2!3d23.0735447!4d88.2828607"
+
+                                    class="btn btn-md btn-primary">Get Direction</a>
+                              </div>
+                              <div class="col-md-4 text-center">
+                                    <h3 class="font-weight-bold">Business Hours</h3>
+                                    <p style="font-size:20px;">Mon:	11:00 AM – 8:00 PM</p>
+                                    <p style="font-size:20px;">Tue:	11:00 AM – 8:00 PM</p>
+                                    <p style="font-size:20px;">Wed:	11:00 AM – 8:00 PM</p>
+                                    <p style="font-size:20px;">Thu:	11:00 AM – 8:00 PM</p>
+                                    <p style="font-size:20px;">Fri:	Closed</p>
+                                    <p style="font-size:20px;">Sat:	11:00 AM – 8:00 PM</p>
+                                    <p style="font-size:20px;">Sun:	11:00 AM – 8:00 PM</p>
+                              </div>
+                        </div>
+                        <hr class="my-10">
+                        <!-- Section: Block Content -->
+                        <section class="container-fluid mt-3 mb-5">
+
+                          <style>
+                            .map-container {
+                              overflow: hidden;
+                              position: relative;
+                              height: 0;
+                            }
+
+                            .map-container iframe {
+                              left: 0;
+                              top: 0;
+                              height: 100%;
+                              width: 100%;
+                              position: absolute;
+                            }
+                          </style>
+
+                          <!-- Google Maps -->
+                          <div id="full-width-map" class="z-depth-1-half map-container" style="height: 500px">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.6441254492097!2d88.2806654149412!3d23.07350508492735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8f3cd0bf2b349%3A0x7928cc3f8f91fd17!2sSinjini%20Gems%20%26%20Jewellers!5e0!3m2!1sen!2sin!4v1624517770623!5m2!1sen!2sin" frameborder="0"
+                              style="border:0" allowfullscreen></iframe>
+
+                          </div>
+                          <!-- Google Maps -->
+
+                        </section>
+                        <!-- Section: Block Content -->
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="termCondition">
+           				 <!--Section: Content-->
+            						  <section class="container my-5 z-depth-1">
+
+            						    <div class="row pr-lg-5">
+            						      <div class="col-md-5">
+
+            						        <div class="view">
+            						          <img src="https://mdbootstrap.com/img/illustrations/undraw_Group_chat_unwm.svg" class="img-fluid" alt="smaple image">
+            						        </div>
+
+            						      </div>
+            						      <div class="col-md-7 d-flex align-items-center">
+            						        <div>
+
+            						          		<!-- Default form contact -->
+            										<form class="text-center border border-light p-5" action="#!">
+
+            										    <p class="h4 mb-4">Contact us</p>
+
+            										    <!-- Name -->
+            										    <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+
+            										    <!-- Email -->
+            										    <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+            										    <!-- Message -->
+            										    <div class="form-group">
+            										        <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+            										    </div>
+
+            										    <!-- Send button -->
+            										    <button class="btn btn-info btn-block">Send</button>
+
+            										</form>
+            										<!-- Default form contact -->
+            								 </div>
+            								</div>
+            							</div>
+
+            							</section>
+            							<!--Section: Content-->
+
+                    </div>
+                  </div>
+
+                </div>
+
+                	<!--div class="cart bg-pink">
+		                <div class="row">
+		                    <div class="col-xs-6">
+		                    	<div class="text-right">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fullHeightModalRight">Know More</button>
+
+		                        </div>
+		                    </div>
+		                    <div class="col-xs-6 ml-auto">
+		                        <p class="responsive-font-size grey-text p-responsive">© 2021 Copyright: Sinjini gems and Jewellers</p>
+		                    </div>
+		                </div>
+                </div-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Full Height Modal Right -->
+    <div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+
+      <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+      <div class="modal-dialog modal-full-height modal-right" role="document">
+
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title w-100" id="myModalLabel">Info</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <section class="container">
+                  <!-- TradingView Widget BEGIN -->
+                  <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/FX_IDC-XAUINR/" rel="noopener" target="_blank"><span class="blue-text">XAUINR Quotes</span></a> by TradingView</div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                    {
+                    "symbol": "FX_IDC:XAUINR",
+                    "width": 300,
+                    "height": 220,
+                    "locale": "in",
+                    "dateRange": "12M",
+                    "colorTheme": "light",
+                    "trendLineColor": "rgba(41, 98, 255, 1)",
+                    "underLineColor": "rgba(41, 98, 255, 0.3)",
+                    "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                    "isTransparent": false,
+                    "autosize": false,
+                    "largeChartUrl": ""
+                  }
+                    </script>
+                  </div>
+                  <!-- TradingView Widget END -->
+
+                  <!-- TradingView Widget BEGIN -->
+                  <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/FX_IDC-XAGINR/" rel="noopener" target="_blank"><span class="blue-text">XAGINR Quotes</span></a> by TradingView</div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                    {
+                    "symbol": "FX_IDC:XAGINR",
+                    "width": 300,
+                    "height": 220,
+                    "locale": "in",
+                    "dateRange": "12M",
+                    "colorTheme": "light",
+                    "trendLineColor": "rgba(41, 98, 255, 1)",
+                    "underLineColor": "rgba(41, 98, 255, 0.3)",
+                    "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                    "isTransparent": false,
+                    "autosize": false,
+                    "largeChartUrl": ""
+                  }
+                    </script>
+                  </div>
+                  <!-- TradingView Widget END -->
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                      <div class="tradingview-widget-container__widget"></div>
+                      <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/TVC-GOLD/" rel="noopener" target="_blank"><span class="blue-text">GOLD Profile</span></a> by TradingView</div>
+                      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-profile.js" async>
+                      {
+                      "symbol": "TVC:GOLD",
+                      "width": "300",
+                      "height": "500",
+                      "colorTheme": "light",
+                      "isTransparent": false,
+                      "locale": "in"
+                    }
+                      </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                    <p class="grey-text">© 2021 Copyright: Sinjini gems and Jewellers</p>
+                </section>
+
+
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Full Height Modal Right -->
+
+
+
+{% endblock content %}
